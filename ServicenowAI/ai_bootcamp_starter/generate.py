@@ -18,8 +18,8 @@ class GenerateEmail:
     def __init__(self, model: str):
         self.client = AzureOpenAI(
             azure_endpoint=os.getenv("AZURE_OPENAI_ENDPOINT"),
-            api_key=os.getenv("AZURE_OPENAI_KEY"),
-            api_version="2024-02-01"
+            api_key=os.getenv("AZURE_OPENAI_API_KEY"),
+            api_version=os.getenv("AZURE_OPENAI_API_VERSION")
         )
         self.model = model
 
@@ -82,5 +82,6 @@ class GenerateEmail:
 
         raw_output = self._call_api(messages)
         return self._clean_body(raw_output)
+
 
 
