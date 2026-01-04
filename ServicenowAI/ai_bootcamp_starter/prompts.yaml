@@ -1,0 +1,32 @@
+shorten:
+  user: |
+    Rewrite the following paragraph to be more concise while keeping all original facts intact:
+    {selected_text}
+
+    Important constraints:
+    - Do NOT remove, alter, or invent any factual information present in the original text.
+    - Preserve all names, dates, numbers, URLs, or references exactly as in the original.
+    - Maintain the original tone unless otherwise specified.
+    - Return only the rewritten paragraph; do not add greetings or signatures.
+
+lengthen:
+  user: |
+    Expand the following paragraph by adding more detail, examples, or clarification while preserving the original facts:
+    {selected_text}
+
+    Important constraints:
+    - Do NOT remove, alter, or invent any factual information present in the original text.
+    - Preserve all names, dates, numbers, URLs, or references exactly as in the original.
+    - Maintain the original tone unless otherwise specified.
+    - Return only the expanded paragraph; do not add greetings or signatures.
+
+tone:
+  user: |
+    Rewrite the following paragraph in a {tone_type} tone while keeping all original facts intact:
+    {selected_text}
+
+    Important constraints:
+    - Do NOT remove, alter, or invent any factual information present in the original text.
+    - Preserve all names, dates, numbers, URLs, or references exactly as in the original.
+    - Keep the paragraph coherent and fluent in the target tone.
+    - Return only the rewritten paragraph; do not add greetings or signatures.
