@@ -14,8 +14,8 @@ st.set_page_config(
     layout="wide"
 )
 
-MODEL_NAME1 = os.getenv("AZURE_OPENAI_DEPLOYMENT_NAME", "gpt-4.1")
-MODEL_NAME2 = os.getenv("AZURE_OPENAI_DEPLOYMENT_NAME", "gpt-4o-mini")
+MODEL_NAME1 = os.getenv("AZURE_GPT_41_DEPLOYMENT", "gpt-4.1")
+MODEL_NAME2 = os.getenv("AZURE_GPT_4O_MINI_DEPLOYMENT", "gpt-4o-mini")
 
 generator = GenerateEmail(model=MODEL_NAME1)
 evaluator = LLMEvaluator(model=MODEL_NAME2)
@@ -225,6 +225,7 @@ if st.button("Evaluate Response"):
                 value=robustness_report,
                 height=260
             )
+
 
 
 
