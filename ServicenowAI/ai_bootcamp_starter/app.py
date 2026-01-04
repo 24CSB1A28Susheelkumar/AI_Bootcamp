@@ -23,7 +23,7 @@ evaluator = LLMEvaluator(model=MODEL_NAME2)
 # ---------------- DATA LOADING ----------------
 @st.cache_data
 def load_emails_from_jsonl(file_path):
-    path = file_path if os.path.exists(file_path) else f"datasets/{file_path}"
+    path = file_path if os.path.exists(file_path) else f"app/datasets/{file_path}"
     if not os.path.exists(path):
         return {"emails": {}, "ids": []}
 
@@ -225,6 +225,7 @@ if st.button("Evaluate Response"):
                 value=robustness_report,
                 height=260
             )
+
 
 
 
