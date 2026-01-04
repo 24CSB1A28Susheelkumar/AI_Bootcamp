@@ -9,8 +9,8 @@ import matplotlib.pyplot as plt
 # ---------------- ENV ----------------
 load_dotenv()
 
-MODEL_GEN = os.getenv("AZURE_OPENAI_DEPLOYMENT_NAME", "gpt-4.1")
-MODEL_JUDGE = os.getenv("AZURE_OPENAI_DEPLOYMENT_NAME", "gpt-4o-mini")
+MODEL_GEN = os.getenv("AZURE_GPT_41_DEPLOYMENT", "gpt-4.1")
+MODEL_JUDGE = os.getenv("AZURE_GPT_4O_MINI_DEPLOYMENT", "gpt-4o-mini")
 
 generator = GenerateEmail(model=MODEL_GEN)
 evaluator = LLMEvaluator(model=MODEL_JUDGE)
@@ -136,5 +136,6 @@ if __name__ == "__main__":
     for name, (path, action) in DATASETS.items():
         records = load_jsonl(path)
         evaluate_dataset(records, name, action)
+
 
 
