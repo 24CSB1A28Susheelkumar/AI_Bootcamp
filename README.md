@@ -4,30 +4,30 @@ This repository contains an experimental AI-powered email assistance application
 
 The project starts with an original email dataset and extends to synthetic dataset generation to study model behavior and robustness.
 
-Overview
+Overview:
 
 Key functionalities include:
 
-Email rewriting and enhancement
+.Email rewriting and enhancement
 
-Tone modification and length control
+.Tone modification and length control
 
-LLM-based evaluation (completeness, faithfulness, robustness)
+.LLM-based evaluation (completeness, faithfulness, robustness)
 
-Synthetic email generation for experimentation
+.Synthetic email generation for experimentation
 
-App Details
+App Details:
 
-app.py
+app.py:
 Core Streamlit application operating on the original dataset. Acts as the baseline implementation for email editing and evaluation.
 
-optional_app.py
+optional_app.py:
 Alternate interface focused on synthetic dataset generation and comparative evaluation across different LLM roles.
 
-Tech Stack
+Tech Stack:
 
-Python
+.Python
 
-Streamlit
+.Streamlit
 
-Azure OpenAI / OpenAI APIs
+.OpenAI APIs
